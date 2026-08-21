@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Platform — OutLayer</title>
-  <meta name="description" content="The OutLayer platform: verifiable off-chain compute with Intel TDX attestation, NEAR MPC key derivation, encrypted secrets and built-in monetization.">
+  <meta name="description" content="The OutLayer platform: agent code and agent keys in one Intel TDX enclave — priced connectors, NEAR MPC key derivation, encrypted secrets and built-in monetization.">
   <link rel="icon" type="image/png" href="outlayer.png">
   <link rel="canonical" href="https://outlayer.ai/platform">
   <link rel="apple-touch-icon" href="/outlayer.png">
@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="OutLayer">
   <meta property="og:url" content="https://outlayer.ai/platform">
   <meta property="og:title" content="Platform — OutLayer">
-  <meta property="og:description" content="The OutLayer platform: verifiable off-chain compute with Intel TDX attestation, NEAR MPC key derivation, encrypted secrets and built-in monetization.">
+  <meta property="og:description" content="The OutLayer platform: agent code and agent keys in one Intel TDX enclave — priced connectors, NEAR MPC key derivation, encrypted secrets and built-in monetization.">
   <meta property="og:image" content="https://outlayer.ai/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -20,12 +20,20 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@out_layer">
   <meta name="twitter:title" content="Platform — OutLayer">
-  <meta name="twitter:description" content="The OutLayer platform: verifiable off-chain compute with Intel TDX attestation, NEAR MPC key derivation, encrypted secrets and built-in monetization.">
+  <meta name="twitter:description" content="The OutLayer platform: agent code and agent keys in one Intel TDX enclave — priced connectors, NEAR MPC key derivation, encrypted secrets and built-in monetization.">
   <meta name="twitter:image" content="https://outlayer.ai/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJ8BF2YLT8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJ8BF2YLT8');
+  </script>
 </head>
 <body>
   <canvas id="bg-canvas"></canvas>
@@ -64,7 +72,7 @@
         <span class="hero-line-2">Platform</span>
       </h1>
       <p class="hero-subtitle fade-in">
-        Verifiable off-chain computation with hardware-grade security for NEAR smart contracts and HTTPS applications
+        Agent code and agent keys inside the same hardware enclave — priced connectors, NEAR smart contracts and HTTPS applications, all on one verifiable execution layer
       </p>
     </div>
     <div class="hero-glow"></div>
@@ -319,7 +327,7 @@
       <div class="section-header fade-in">
         <span class="section-tag">Why OutLayer</span>
         <h2>Not Another <span class="gradient-text">L2</span></h2>
-        <p class="section-subtitle">A fundamentally different approach to off-chain computation</p>
+        <p class="section-subtitle">A fundamentally different approach to running agents that hold money</p>
       </div>
 
       <div class="comparison-grid fade-in">

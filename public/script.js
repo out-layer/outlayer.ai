@@ -438,3 +438,35 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+
+// ===== OUTBOUND CLICK TRACKING =====
+// Every meaningful action on this site is a link somewhere else — the app, the
+// docs, GitHub, a product. Page views alone say nothing, so each departure is
+// reported explicitly rather than relying on GA4's own outbound heuristic
+// (which does not treat app.outlayer.ai as leaving outlayer.ai).
+document.addEventListener(
+  'click',
+  (e) => {
+    if (typeof window.gtag !== 'function') return; // blocked or not loaded
+    const a = e.target && e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+
+    let url;
+    try {
+      url = new URL(a.href, location.href);
+    } catch {
+      return;
+    }
+    if (!/^https?:$/.test(url.protocol)) return;
+    if (url.host === location.host) return; // same page set, already a page_view
+
+    window.gtag('event', 'outbound_click', {
+      destination_host: url.host,
+      destination_url: url.href,
+      link_text: (a.textContent || a.getAttribute('aria-label') || '').trim().slice(0, 100),
+      source_page: location.pathname,
+    });
+  },
+  true
+);
