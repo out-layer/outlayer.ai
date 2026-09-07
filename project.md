@@ -143,7 +143,7 @@ Short description of the page.
 | API          | https://api.outlayer.ai                          |
 | Docs         | https://app.outlayer.ai/docs/getting-started |
 | Playground   | https://app.outlayer.ai/playground          |
-| GitHub       | https://github.com/fastnear/near-outlayer        |
+| GitHub       | https://github.com/out-layer/outlayer        |
 | Twitter/X    | https://x.com/out_layer                          |
 | near.email   | https://near.email                               |
 | Price Oracle | https://price-oracle.outlayer.ai                       |
