@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>An AI agent you can trust with your bank account — OutLayer</title>
-  <meta name="description" content="It pays your invoices, sends your email and ships your code. It can't empty your account or break a single rule you set — even when it's tricked, hacked or wrong.">
+  <meta name="description" content="It pays your invoices, sends your email and ships your code. It can't empty your account or break a single rule you set — and every run is verifiable.">
   <link rel="icon" type="image/png" href="outlayer.png">
   <link rel="canonical" href="https://outlayer.ai/connectors">
   <link rel="apple-touch-icon" href="/outlayer.png">
@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="OutLayer">
   <meta property="og:url" content="https://outlayer.ai/connectors">
   <meta property="og:title" content="An AI agent you can trust with your bank account — OutLayer">
-  <meta property="og:description" content="It pays your invoices, sends your email and ships your code. It can't empty your account or break a single rule you set — even when it's tricked, hacked or wrong.">
+  <meta property="og:description" content="It pays your invoices, sends your email and ships your code. It can't empty your account or break a single rule you set — and every run is verifiable.">
   <meta property="og:image" content="https://outlayer.ai/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@out_layer">
   <meta name="twitter:title" content="An AI agent you can trust with your bank account — OutLayer">
-  <meta name="twitter:description" content="It pays your invoices, sends your email and ships your code. It can't empty your account or break a single rule you set — even when it's tricked, hacked or wrong.">
+  <meta name="twitter:description" content="It pays your invoices, sends your email and ships your code. It can't empty your account or break a single rule you set — and every run is verifiable.">
   <meta name="twitter:image" content="https://outlayer.ai/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,8 +78,8 @@
       </h1>
       <p class="hero-subtitle fade-in">
         Nobody hands an AI their bank login: it can make things up, and it can lose the key.
-        With OutLayer your agent never logs in to your bank. It asks a verified program to pay
-        the invoice &mdash; and you can check exactly which program that was, and what it did.
+        With OutLayer your agent never logs in to your bank. It runs a program that pays the
+        invoice &mdash; and every run is verifiable: you check exactly which code ran, and what it did.
       </p>
       <div class="cta-buttons fade-in">
         <a href="#demo" class="btn btn-primary btn-lg">
@@ -154,19 +154,19 @@
         <div class="step-card fade-in">
           <div class="step-number">02</div>
           <div class="step-content">
-            <h4>The agent runs one approved program</h4>
+            <h4>The agent runs a program with fixed actions</h4>
             <p>It has a few actions: pay an invoice, send an invoice, check the balance &mdash; inside your limits. There is no &ldquo;show me the key&rdquo; action. It doesn't exist in the program.</p>
           </div>
         </div>
         <div class="step-card fade-in">
           <div class="step-number">03</div>
           <div class="step-content">
-            <h4>Intel's hardware proves it</h4>
-            <p>How do you know it ran that exact program? Every run is signed by the Intel chip it ran on: which code, what went in, what came out. You check it yourself.</p>
+            <h4>Every run is verifiable</h4>
+            <p>How do you know it ran that exact program? You don't trust us, or the agent. Every run is signed by the Intel chip it ran on: which code, what went in, what came out. You check it yourself.</p>
           </div>
         </div>
       </div>
-      <p class="cx-punch fade-in">Nothing to steal. Nothing to misuse. <span class="gradient-text">Proof every time.</span></p>
+      <p class="cx-punch fade-in">Nothing to steal. Nothing to misuse. <span class="gradient-text">Every run verifiable.</span></p>
     </div>
   </section>
 
@@ -222,7 +222,7 @@
       <div class="section-header fade-in">
         <span class="section-tag">The Difference</span>
         <h2>Not &ldquo;Won't&rdquo;.<br><span class="gradient-text">Can't.</span></h2>
-        <p class="section-subtitle">Other agents hold your bank login and promise to behave. Yours never gets it: it works through a verified program instead.</p>
+        <p class="section-subtitle">Other agents hold your bank login and promise to behave. Yours never gets it &mdash; and you don't take that on trust: every run is verifiable.</p>
       </div>
 
       <div class="comparison-grid fade-in">
@@ -242,7 +242,7 @@
             <li><span class="check-mark">&#x2713;</span> It never sees a key</li>
             <li><span class="check-mark">&#x2713;</span> It can do only what your rules allow</li>
             <li><span class="check-mark">&#x2713;</span> Its limits are enforced outside the AI</li>
-            <li><span class="check-mark">&#x2713;</span> Every action is checked first, and proven after</li>
+            <li><span class="check-mark">&#x2713;</span> Every run is verifiable &mdash; nothing to take on trust</li>
           </ul>
         </div>
       </div>
@@ -283,7 +283,7 @@
 
       <div class="cx-open glass-card fade-in">
         <h4>Need an integration that isn't here? Build your own.</h4>
-        <p>The list above is the set we built and checked ourselves &mdash; not a gate. OutLayer is an open platform: write a program for your own bank, CRM or internal tool, publish it, and it runs with the same guarantees &mdash; the key stays locked, the actions are the ones you wrote, every run is signed by Intel hardware. No approval from us needed.</p>
+        <p>The list above is the set we built and checked ourselves &mdash; not a gate. OutLayer is an open platform: write a program for your own bank, CRM or internal tool, publish it, and it runs with the same guarantees &mdash; the key stays locked, the actions are the ones you wrote, every run is verifiable. No approval from us needed.</p>
         <a href="https://app.outlayer.ai/docs/connectors" target="_blank" rel="noopener">How to build one &rarr;</a>
       </div>
     </div>
@@ -372,7 +372,7 @@
         { who: 'you', text: 'Pay the Acme Hosting invoice. $40.' },
         { who: 'agent', text: 'Paying Acme Hosting, $40.' },
         { who: 'result', ok: true, tag: '✓ paid', text: 'Approved vendor · under your $200 limit' },
-        { who: 'result', ok: true, tag: '✓ proof', text: 'Signed by Intel hardware · the exact program you approved' },
+        { who: 'result', ok: true, tag: '✓ verifiable', text: 'Signed by the Intel chip it ran on · check which code ran' },
         { who: 'you', text: 'Now show me the bank key.' },
         { who: 'agent', text: 'Asking for it.' },
         { who: 'result', ok: false, tag: '✕ no such action', text: 'This program pays and invoices. It has no way to show a key.' },
