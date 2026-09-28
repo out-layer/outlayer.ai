@@ -51,6 +51,7 @@ Named routes:
 | ----------- | ---------------- |
 | `/`         | `index.html`     |
 | `/products` | `products.html`  |
+| `/connectors` | `connectors.html` |
 
 ---
 
@@ -101,6 +102,22 @@ Showcase of products built on OutLayer.
 
 ---
 
+### `/connectors` — Connectors (connectors.html)
+
+Landing for people arriving from the connectors announcement: what an agent can do through connectors and why the owner's limits hold. Plain language first, builders second.
+
+| Section        | Description                                                                 |
+| -------------- | --------------------------------------------------------------------------- |
+| Hero           | "Your AI agent acts. You set the limits." — CTA to app.outlayer.ai/connectors |
+| Demo           | Animated chat (inline script): an agent told to break a $15 limit; the refusals are the Hyperliquid connector's own error strings |
+| How It Works   | 3 steps: you set rules → agent asks → enclave decides                        |
+| Connectors     | Hyperliquid, Polymarket, Gmail, GitHub, Mercury — "can do" / "you control"  |
+| Why You Can Let It | Keys never with the agent; limits outside the prompt; attestation; pay per call |
+| For Builders   | Skill URL (skills.outlayer.ai/outlayer/SKILL.md), 3-step start, docs, Telegram |
+| CTA + legal    | Connect button; third-party venues, jurisdiction and responsibility notice, link to Terms |
+
+Styles: `/* ===== CONNECTORS PAGE ===== */` in `styles.css` (`cx-*` classes).
+
 <!-- ===== ADD NEW PAGES BELOW USING THE TEMPLATE ===== -->
 
 ## Adding a New Page
@@ -145,5 +162,6 @@ Short description of the page.
 | Playground   | https://app.outlayer.ai/playground          |
 | GitHub       | https://github.com/out-layer/outlayer        |
 | Twitter/X    | https://x.com/out_layer                          |
+| Telegram     | https://t.me/out_layer                           |
 | near.email   | https://near.email                               |
 | Price Oracle | https://price-oracle.outlayer.ai                       |

@@ -56,6 +56,10 @@ app.get('/intents', (req, res) => {
   serveHtml(path.join(__dirname, 'public', 'intents.html'), res);
 });
 
+app.get('/connectors', (req, res) => {
+  serveHtml(path.join(__dirname, 'public', 'connectors.html'), res);
+});
+
 app.get('/symbol', (req, res) => {
   serveHtml(path.join(__dirname, 'public', 'symbol.html'), res);
 });
