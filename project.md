@@ -51,7 +51,7 @@ Named routes:
 | ----------- | ---------------- |
 | `/`         | `index.html`     |
 | `/products` | `products.html`  |
-| `/connectors` | `connectors.html` |
+| `/connectors` | `connectors.html` (nav label: Integrations) |
 
 ---
 
