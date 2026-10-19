@@ -507,31 +507,57 @@ wallet::<span class="code-fn">withdraw</span>(
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-tag">Get Started</span>
-        <h2>Zero to Deployed<br><span class="gradient-text">in Minutes</span></h2>
+        <h2>Zero to Working<br><span class="gradient-text">in Minutes</span></h2>
       </div>
 
-      <div class="code-block fade-in" style="max-width: 600px; margin: 0 auto;">
-        <div class="code-header">
-          <span class="code-dot" style="background:#ff5f57"></span>
-          <span class="code-dot" style="background:#febc2e"></span>
-          <span class="code-dot" style="background:#28c840"></span>
-          <span class="code-title">terminal</span>
-        </div>
-        <pre><code><span class="code-comment"># Install</span>
-cargo install outlayer-cli
+      <div class="qs-tabs fade-in" role="tablist" aria-label="Get started">
+        <button class="qs-tab active" role="tab" id="qs-tab-agent" aria-selected="true" aria-controls="qs-panel-agent" data-tab="agent">For your agent</button>
+        <button class="qs-tab" role="tab" id="qs-tab-dev" aria-selected="false" aria-controls="qs-panel-dev" data-tab="dev">For developers</button>
+      </div>
 
-<span class="code-comment"># Login with NEAR wallet</span>
+      <div class="qs-panel" role="tabpanel" id="qs-panel-agent" aria-labelledby="qs-tab-agent">
+        <div class="skill-url-block" style="max-width: 680px; margin: 0 auto 2.5rem;">
+          <div class="skill-url-inner">
+            <code class="skill-url-text" id="skill-url">https://skills.outlayer.ai/outlayer/SKILL.md</code>
+            <button class="skill-url-copy" id="copy-skill-btn" onclick="copySkillUrl()">Copy</button>
+          </div>
+          <p class="skill-url-hint">Paste it into your agent's chat: Claude, Cursor or your own agent</p>
+        </div>
+
+        <ol class="cx-start">
+          <li><strong>Your agent reads the skill</strong> and creates its own wallet &mdash; one request, no sign-up.</li>
+          <li><strong>You set the rules</strong> at app.outlayer.ai: spending limits, allowed addresses, approvals. This step needs a NEAR wallet.</li>
+          <li><strong>You fund the wallet</strong> at the address your agent reports, and it works within your rules.</li>
+        </ol>
+      </div>
+
+      <div class="qs-panel" role="tabpanel" id="qs-panel-dev" aria-labelledby="qs-tab-dev" hidden>
+        <div class="code-block" style="max-width: 680px; margin: 0 auto;">
+          <div class="code-header">
+            <span class="code-dot" style="background:#ff5f57"></span>
+            <span class="code-dot" style="background:#febc2e"></span>
+            <span class="code-dot" style="background:#28c840"></span>
+            <span class="code-title">terminal</span>
+          </div>
+          <pre><code><span class="code-comment"># Install</span>
+curl -fsSL https://raw.githubusercontent.com/out-layer/outlayer-cli/main/install.sh \
+  | sh
+
+<span class="code-comment"># Log in with your NEAR account</span>
 outlayer login
 
-<span class="code-comment"># Create your first agent</span>
-mkdir my-agent && cd my-agent
-outlayer init
+<span class="code-comment"># Create your first agent (edit src/main.rs)</span>
+outlayer create my-agent &amp;&amp; cd my-agent
 
-<span class="code-comment"># Write your agent logic (edit src/main.rs)</span>
+<span class="code-comment"># Build, upload the .wasm, deploy it</span>
+./build.sh
+outlayer upload out/my-agent.wasm
+outlayer deploy my-agent <span class="code-string">&lt;URL printed by upload&gt;</span>
 
-<span class="code-comment"># Deploy &amp; run</span>
-outlayer deploy
-outlayer run <span class="code-string">'{"command": "hello"}'</span></code></pre>
+<span class="code-comment"># Create a payment key, then run</span>
+outlayer keys create
+outlayer run alice.near/my-agent <span class="code-string">'{"command": "hello"}'</span></code></pre>
+        </div>
       </div>
     </div>
   </section>
@@ -609,5 +635,25 @@ outlayer run <span class="code-string">'{"command": "hello"}'</span></code></pre
   </nav>
 
   <script src="script.js"></script>
+  <script>
+    function copySkillUrl() {
+      var url = document.getElementById('skill-url').textContent;
+      navigator.clipboard.writeText(url).then(function() {
+        var btn = document.getElementById('copy-skill-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+      });
+    }
+    document.querySelectorAll('.qs-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.qs-tab').forEach(function(t) {
+          var on = t === tab;
+          t.classList.toggle('active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
