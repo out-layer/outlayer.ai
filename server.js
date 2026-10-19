@@ -24,10 +24,14 @@ function serveHtml(filePath, res) {
   const hash = isDev ? Date.now() : ASSET_HASH;
   html = html.replace(/styles\.css(\?[^"]*)?"/g, `styles.css?v=${hash}"`);
   html = html.replace(/script\.js(\?[^"]*)?"/g, `script.js?v=${hash}"`);
+  res.setHeader('Cache-Control', 'no-cache, no-store');
   res.type('html').send(html);
 }
 
+// index: false — `/` must reach the `*` route below, which injects ?v=hash;
+// served by static, the home page links unversioned assets that nginx caches for 7 days.
 app.use(express.static(path.join(__dirname, 'public'), {
+  index: false,
   etag: true,
   lastModified: true,
   setHeaders(res, filePath) {

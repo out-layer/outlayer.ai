@@ -12,8 +12,8 @@
   --border: rgba(255, 255, 255, 0.06);
   --border-hover: rgba(255, 255, 255, 0.12);
   --text: #e4e4e7;
-  --text-muted: #71717a;
-  --text-dim: #52525b;
+  --text-muted: #a1a1aa;
+  --text-dim: #8e8e98;
   --green: #00ff88;
   --green-dim: #00cc6a;
   --orange: #ff6b35;
@@ -541,7 +541,7 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0.3;
+  opacity: 0.75;
   line-height: 1;
   margin-bottom: 1rem;
 }
@@ -1800,7 +1800,7 @@ img {
 /* Wide screens: always show labels */
 @media (min-width: 1440px) {
   .dot-label {
-    opacity: 0.5;
+    opacity: 1;
     transform: translateX(0);
   }
   .section-dot.active .dot-label {
