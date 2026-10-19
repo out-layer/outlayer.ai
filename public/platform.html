@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Platform — OutLayer</title>
-  <meta name="description" content="The OutLayer platform: agent code and agent keys in one Intel TDX enclave — priced connectors, NEAR MPC key derivation, encrypted secrets and built-in monetization.">
+  <meta name="description" content="The OutLayer platform: Intel TDX execution with keys issued by the NEAR MPC network — connectors, encrypted secrets, host interfaces and built-in monetization.">
   <link rel="icon" type="image/png" href="outlayer.png">
   <link rel="canonical" href="https://outlayer.ai/platform">
   <link rel="apple-touch-icon" href="/outlayer.png">
@@ -12,15 +12,15 @@
   <meta property="og:site_name" content="OutLayer">
   <meta property="og:url" content="https://outlayer.ai/platform">
   <meta property="og:title" content="Platform — OutLayer">
-  <meta property="og:description" content="The OutLayer platform: agent code and agent keys in one Intel TDX enclave — priced connectors, NEAR MPC key derivation, encrypted secrets and built-in monetization.">
+  <meta property="og:description" content="The OutLayer platform: Intel TDX execution with keys issued by the NEAR MPC network — connectors, encrypted secrets, host interfaces and built-in monetization.">
   <meta property="og:image" content="https://outlayer.ai/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="OutLayer — verifiable compute and custody for AI agents">
+  <meta property="og:image:alt" content="OutLayer — a secure transaction layer for AI agents">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@out_layer">
   <meta name="twitter:title" content="Platform — OutLayer">
-  <meta name="twitter:description" content="The OutLayer platform: agent code and agent keys in one Intel TDX enclave — priced connectors, NEAR MPC key derivation, encrypted secrets and built-in monetization.">
+  <meta name="twitter:description" content="The OutLayer platform: Intel TDX execution with keys issued by the NEAR MPC network — connectors, encrypted secrets, host interfaces and built-in monetization.">
   <meta name="twitter:image" content="https://outlayer.ai/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
         <a href="/platform" class="active">Platform</a>
         <a href="/products">Products</a>
         <a href="/intents">Intents</a>
-        <a href="/connectors">Integrations</a>
+        <a href="/connectors">Connectors</a>
         <a href="https://app.outlayer.ai/docs/getting-started" target="_blank" rel="noopener">Docs</a>
         <a href="https://github.com/out-layer/outlayer" target="_blank" rel="noopener" class="nav-icon" aria-label="GitHub">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
@@ -73,7 +73,7 @@
         <span class="hero-line-2">Platform</span>
       </h1>
       <p class="hero-subtitle fade-in">
-        Agent code and agent keys inside the same hardware enclave — priced connectors, NEAR smart contracts and HTTPS applications, all on one verifiable execution layer
+        Your code runs in an Intel TDX enclave and gets signatures, never keys — connectors, NEAR smart contracts and HTTPS applications, all on one verifiable execution layer
       </p>
     </div>
     <div class="hero-glow"></div>
@@ -94,7 +94,7 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
           <h4>Intel TDX Attestation</h4>
-          <p>Every execution produces a hardware-signed attestation report. Cryptographic proof that <em>your</em> code ran with <em>your</em> inputs &mdash; inside CPU-encrypted memory that even the server operator can't access.</p>
+          <p>Every completed run produces a hardware-signed attestation report. Cryptographic proof that <em>your</em> code ran with <em>your</em> inputs &mdash; inside CPU-encrypted memory that even the server operator can't access.</p>
         </div>
 
         <div class="feature-card glass-card fade-in">
@@ -102,7 +102,7 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
           </div>
           <h4>Confidential Key Derivation</h4>
-          <p>Derive encryption keys via <strong>NEAR MPC Network</strong> &mdash; 27 validators, threshold BLS12-381. No single node ever sees the full secret. The same infrastructure securing <strong>NEAR Intents</strong> and billions in cross-chain assets.</p>
+          <p>Derive encryption keys via <strong>NEAR MPC Network</strong> &mdash; threshold BLS12-381. No single node ever sees the full secret. The same infrastructure securing <strong>NEAR Intents</strong> and billions in cross-chain assets.</p>
         </div>
 
         <div class="feature-card glass-card fade-in">
@@ -140,6 +140,161 @@
     </div>
   </section>
 
+  <!-- ==================== WHAT YOUR CODE CAN CALL ==================== -->
+  <section class="section" id="interfaces">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Host Interfaces</span>
+        <h2>What Your Code<br><span class="gradient-text">Can Call</span></h2>
+        <p class="section-subtitle">Your code runs as a sandboxed WASI component. Blockchain access, storage, wallets, randomness, payments and signing keys are host interfaces it imports, served from inside the enclave.</p>
+      </div>
+
+      <div class="syscall-grid">
+        <div class="syscall-card glass-card fade-in">
+          <div class="syscall-header">
+            <code class="syscall-name">near:rpc</code>
+            <span class="syscall-equiv">Blockchain</span>
+          </div>
+          <h4>Blockchain Access</h4>
+          <p>Full NEAR RPC from inside the enclave. View calls, send signed transactions, read any contract state. Your code interacts with DeFi, DAOs and NFTs without exposing signing keys.</p>
+        </div>
+
+        <div class="syscall-card glass-card fade-in">
+          <div class="syscall-header">
+            <code class="syscall-name">near:storage</code>
+            <span class="syscall-equiv">Storage</span>
+          </div>
+          <h4>Encrypted Storage</h4>
+          <p>Persistent key-value storage with atomic CAS and increment. Private by default &mdash; even the operator can't read it. Public when you choose, so other projects can read it.</p>
+        </div>
+
+        <div class="syscall-card glass-card fade-in">
+          <div class="syscall-header">
+            <code class="syscall-name">outlayer:wallet</code>
+            <span class="syscall-equiv">Wallet</span>
+          </div>
+          <h4>Multi-Chain Wallet</h4>
+          <p>NEAR, every EVM chain, and Solana. Keys are derived in the enclave from a root issued by the NEAR MPC network. Transfer, swap, withdraw &mdash; all governed by the owner's policy with spending limits and multisig.</p>
+        </div>
+
+        <div class="syscall-card glass-card fade-in">
+          <div class="syscall-header">
+            <code class="syscall-name">near:vrf</code>
+            <span class="syscall-equiv">Randomness</span>
+          </div>
+          <h4>Verifiable Randomness</h4>
+          <p>Ed25519 VRF with a proof any NEAR contract can verify. Anti-grinding via blockchain-assigned request IDs. Provably fair lotteries, games, NFT minting.</p>
+        </div>
+
+        <div class="syscall-card glass-card fade-in">
+          <div class="syscall-header">
+            <code class="syscall-name">near:payment</code>
+            <span class="syscall-equiv">Payments</span>
+          </div>
+          <h4>Built-in Payments</h4>
+          <p>Stablecoin payments per execution. Refund API for partial returns. Developers earn per call &mdash; no Stripe, no invoicing, no intermediaries.</p>
+        </div>
+
+        <div class="syscall-card glass-card fade-in">
+          <div class="syscall-header">
+            <code class="syscall-name">outlayer:signing-keys</code>
+            <span class="syscall-equiv">Signing</span>
+          </div>
+          <h4>Keys of Your Own</h4>
+          <p>Ed25519 and secp256k1 keys bound to your project and its caller. Your code gets signatures, never the key &mdash; sign what you return so anyone can check it.</p>
+        </div>
+      </div>
+
+      <div class="features-grid" style="margin-top: 1.25rem;">
+        <div class="feature-card glass-card fade-in">
+          <div class="feature-icon-wrap" style="--accent: #a78bfa;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 7.5V18M15 7.5V18M3 16.811V8.69c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954l-7.108 4.061A1.125 1.125 0 013 16.811z"/></svg>
+          </div>
+          <h4>Sandboxed Execution</h4>
+          <p>WASI capability-based security. Code cannot reach the host filesystem or network except through these interfaces. Every instruction is metered.</p>
+        </div>
+
+        <div class="feature-card glass-card fade-in">
+          <div class="feature-icon-wrap" style="--accent: #00ff88;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+          </div>
+          <h4>Cross-Project Composability</h4>
+          <p>Any project can publish to public storage, and any other project can read it. An oracle publishes prices; a trading bot reads them; a risk agent monitors both.</p>
+        </div>
+
+        <div class="feature-card glass-card fade-in">
+          <div class="feature-icon-wrap" style="--accent: #38bdf8;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h4>Autonomous Scheduling</h4>
+          <p>Interval-based ticks, storage-diff triggers, webhooks. The scheduler is untrusted &mdash; it can decide <em>when</em> to trigger, but can't influence <em>what</em> the code does. All execution happens in the TEE.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECRETS & ACCESS CONTROL ==================== -->
+  <section class="section section-dark" id="secrets">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Secrets &amp; Permissions</span>
+        <h2>End-to-End Encrypted.<br><span class="gradient-text">Access Checked Before Decryption.</span></h2>
+      </div>
+
+      <div class="sc-layout fade-in">
+        <div class="sc-text">
+          <h3 style="font-size: 1.375rem; font-weight: 800; margin-bottom: 1rem;">Secrets Are a Cryptographic Primitive</h3>
+          <p>
+            Developers encrypt secrets <strong>in their browser</strong> using the keystore's public key.
+            The encrypted blob lives on the NEAR blockchain. When the agent runs, the TEE fetches it,
+            decrypts with a hardware-derived key, and injects as environment variables.
+          </p>
+          <p>
+            At no point does the operator, the coordinator, or any component outside the TEE see plaintext.
+            Combined with <strong>Access Conditions</strong>, secrets are protected by both cryptography and hardware isolation,
+            with access gated by on-chain conditions the TEE validates before decrypting.
+          </p>
+        </div>
+        <div class="sc-code">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-dot" style="background:#ff5f57"></span>
+              <span class="code-dot" style="background:#febc2e"></span>
+              <span class="code-dot" style="background:#28c840"></span>
+              <span class="code-title">access_conditions.rs</span>
+            </div>
+            <pre><code><span class="code-comment">// Only DAO council members</span>
+<span class="code-comment">// who hold 100+ USDC</span>
+<span class="code-comment">// can trigger this agent:</span>
+
+<span class="code-fn">Logic</span>(<span class="code-keyword">And</span>, [
+    <span class="code-fn">DaoMember</span> {
+        dao: <span class="code-string">"traders.sputnik-dao.near"</span>,
+        role: <span class="code-string">"council"</span>
+    },
+    <span class="code-fn">FtBalance</span> {
+        contract: <span class="code-string">"usdc.near"</span>,
+        operator: <span class="code-keyword">Gte</span>,
+        value: <span class="code-string">100_000_000</span>
+    }
+])</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Access condition primitives -->
+      <div class="conditions-grid fade-in">
+        <div class="condition-tag">Whitelist</div>
+        <div class="condition-tag">Account Pattern (regex)</div>
+        <div class="condition-tag">NEAR Balance</div>
+        <div class="condition-tag">Token Balance</div>
+        <div class="condition-tag">NFT Ownership</div>
+        <div class="condition-tag">DAO Membership</div>
+        <div class="condition-tag">Boolean Logic (And/Or/Not)</div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== SECURITY MODEL ==================== -->
   <section class="section" id="security">
     <div class="container">
@@ -170,9 +325,9 @@
         <div class="security-card glass-card fade-in">
           <div class="security-layer-tag security-layer-tag-green">Layer 2</div>
           <h3>NEAR MPC Network</h3>
-          <p class="security-desc">27 independent validators running threshold BLS cryptography (20-of-27). Key derivation is distributed &mdash; no single node ever sees the complete secret. The same network securing <strong>NEAR Intents</strong> and billions in cross-chain transactions.</p>
+          <p class="security-desc">Independent node operators running threshold BLS cryptography. Key derivation is distributed &mdash; no single node ever sees the complete secret. The same network securing <strong>NEAR Intents</strong> and billions in cross-chain transactions.</p>
           <ul class="security-props">
-            <li>27 validators, ~20-of-27 threshold</li>
+            <li>Threshold of independent MPC nodes</li>
             <li>BLS12-381 pairing-based cryptography</li>
             <li>Deterministic yet distributed secrets</li>
             <li>All operations auditable on-chain</li>
@@ -183,15 +338,61 @@
       <div class="security-bottom fade-in">
         <p>
           <strong>The result:</strong> to steal a user's secret, an attacker must simultaneously break Intel TDX hardware isolation
-          <em>and</em> compromise 20+ independent MPC validator nodes operated by competing organizations.
+          <em>and</em> compromise a threshold of independent MPC nodes operated by separate organizations.
           This is the same security model protecting billions in assets through NEAR Intents today.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- ==================== VERIFY, DON'T TRUST ==================== -->
+  <section class="section section-dark" id="verify">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Trust Model</span>
+        <h2>Verify, Don't <span class="gradient-text">Trust</span></h2>
+        <p class="section-subtitle">"Verifiable" is not a marketing adjective. It is a technical property backed by Intel TDX measurements approved on-chain and an attestation for every completed run.</p>
+      </div>
+
+      <div class="trust-columns">
+        <div class="trust-col glass-card fade-in">
+          <h4 class="trust-col-heading" style="color: #ef4444;">Operator CANNOT</h4>
+          <p class="trust-col-sub">Hardware-enforced by Intel TDX</p>
+          <ul class="trust-list">
+            <li><span class="x-mark">&#x2715;</span> Read decrypted secrets or wallet private keys</li>
+            <li><span class="x-mark">&#x2715;</span> Modify execution results</li>
+            <li><span class="x-mark">&#x2715;</span> Run different code than what was deployed</li>
+            <li><span class="x-mark">&#x2715;</span> Forge attestation reports</li>
+            <li><span class="x-mark">&#x2715;</span> Extract storage encryption keys</li>
+          </ul>
+        </div>
+
+        <div class="trust-col glass-card fade-in">
+          <h4 class="trust-col-heading" style="color: var(--green);">Anyone CAN Verify</h4>
+          <p class="trust-col-sub">Publicly auditable</p>
+          <ul class="trust-list">
+            <li><span class="check-mark">&#x2713;</span> Exact code running in the enclave (TDX measurements)</li>
+            <li><span class="check-mark">&#x2713;</span> Binary matches public source (Sigstore certificates)</li>
+            <li><span class="check-mark">&#x2713;</span> Each completed run was attested (TDX quote over code, input and output)</li>
+            <li><span class="check-mark">&#x2713;</span> 5 hardware measurements match approved set</li>
+            <li><span class="check-mark">&#x2713;</span> Worker keys registered with verified TDX quotes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="security-bottom fade-in">
+        <p>
+          Intel TDX provides five hardware measurements (MRTD, RTMR0&ndash;3) that uniquely identify the code running inside the enclave.
+          All five must match an approved set stored on the NEAR blockchain. Workers generate keypairs inside the TEE and
+          register them on-chain with verified TDX attestation quotes; on-chain results are submitted with keys that
+          <strong>never leave the enclave</strong>. Every completed run also carries a TDX quote over the code hash, the input and the output.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== HOW IT WORKS ==================== -->
-  <section class="section section-dark" id="how-it-works">
+  <section class="section" id="how-it-works">
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-tag">Architecture</span>
@@ -204,7 +405,7 @@
           <div class="step-number">01</div>
           <div class="step-content">
             <h4>Request Execution</h4>
-            <p>Your smart contract or HTTPS app calls OutLayer with a GitHub repo + commit hash or an immutable WASM binary. Attach payment in stablecoins.</p>
+            <p>Your smart contract or HTTPS app calls a published build: an OutLayer project or an immutable WASM URL with its hash. Attach payment in stablecoins.</p>
           </div>
         </div>
         <div class="step-card fade-in">
@@ -218,7 +419,7 @@
           <div class="step-number">03</div>
           <div class="step-content">
             <h4>TEE Execution</h4>
-            <p>Workers compile your Rust code to WASM, then execute it inside Intel TDX hardware. Process fully isolated &mdash; no filesystem, no network access, instruction-metered.</p>
+            <p>Workers run your published WASM build inside Intel TDX hardware. Process fully isolated &mdash; no filesystem, no network access, instruction-metered.</p>
           </div>
         </div>
         <div class="step-card fade-in">
@@ -258,8 +459,7 @@
 <span class="code-keyword">impl</span> Contract {
   <span class="code-keyword">pub fn</span> <span class="code-fn">run_offchain</span>(&amp;<span class="code-keyword">mut self</span>) {
     outlayer::request_execution(
-      <span class="code-string">"github.com/you/app"</span>,
-      <span class="code-string">"abc123"</span>,
+      <span class="code-string">"alice.near/my-app"</span>, <span class="code-comment">// published project</span>
       json!({ <span class="code-string">"action"</span>: <span class="code-string">"analyze"</span> }),
       <span class="code-string">"on_result"</span>,
     );
@@ -285,7 +485,7 @@
             Your code receives the deposit, does the work, and refunds the change automatically.
           </p>
           <p>
-            Easy <strong>version management</strong> and <strong>secret rotation</strong>. Update code via git push, rotate API keys in the TEE keystore &mdash; no redeployment, no downtime.
+            Easy <strong>version management</strong> and <strong>secret rotation</strong>. Publish a new version, rotate API keys in the TEE keystore &mdash; no redeployment, no downtime.
           </p>
         </div>
         <div class="sc-code">
@@ -364,7 +564,7 @@
     <div class="container">
       <div class="cta-content fade-in">
         <h2>Start Shipping<br><span class="gradient-text">Verifiable Apps</span></h2>
-        <p>OutLayer is open source, live on mainnet, and ready for your next project.</p>
+        <p>OutLayer's enclave code is open source and reproducible, live on mainnet, and ready for your next project.</p>
         <div class="cta-buttons">
           <a href="https://app.outlayer.ai/docs/getting-started" target="_blank" class="btn btn-primary btn-lg">
             Read the Docs
@@ -384,7 +584,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <img src="symbol2d.png" alt="OutLayer" height="28">
-          <p>Verifiable OS for AI Agents.<br>Hardware-grade security out of the box.</p>
+          <p>A secure transaction layer for AI agents.<br>Keys issued by the NEAR MPC network.</p>
         </div>
         <div class="footer-links">
           <div class="footer-col">

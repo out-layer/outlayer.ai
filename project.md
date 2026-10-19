@@ -51,7 +51,7 @@ Named routes:
 | ----------- | ---------------- |
 | `/`         | `index.html`     |
 | `/products` | `products.html`  |
-| `/connectors` | `connectors.html` (nav label: Integrations) |
+| `/connectors` | `connectors.html` (nav label: Connectors) |
 
 ---
 
@@ -70,20 +70,34 @@ Named routes:
 
 ### `/` — Landing (index.html)
 
-Main platform landing page.
+The main pitch: a secure transaction layer for AI agents. Platform depth (host interfaces, secrets, trust model) lives on `/platform`. An alternative "Verifiable OS for Agents" framing is kept, unused, in `copy/verifiable-os.md`.
 
-| Section                   | Description                                                     |
-| ------------------------- | --------------------------------------------------------------- |
-| Hero                      | "Live on NEAR Mainnet" badge, headline, CTA                    |
-| Feature Cards (×6)        | TDX, CKD, Secrets, Blockchain+HTTPS, Monetization, AI-friendly |
-| Security Model            | Two layers: Intel TDX + NEAR MPC Network                       |
-| How It Works (×4 steps)   | Request → Secrets → TEE Execution → Verified Result             |
-| Smart Contract Integration| Code examples (Rust / HTTPS)                                   |
-| Monetization              | Micropayment and subscription examples                          |
-| Comparison                | Comparison with L2s and other solutions                         |
-| Use Cases (×6)            | AI, DeFi, Privacy, Gaming, Infra, Identity                     |
-| CTA                       | Links to docs and playground                                    |
-| Footer                    | Navigation, social links                                        |
+| Section            | Description                                                                  |
+| ------------------ | ---------------------------------------------------------------------------- |
+| Hero               | "Live on NEAR Mainnet" badge, "A secure transaction layer for AI agents", CTA |
+| The Problem        | Who holds the key once an agent can spend: the operator today, nobody with OutLayer |
+| The Solution       | Wallet + protected environment: MPC-issued keys, on-chain policy, connectors, proof of every run |
+| How the Keys Work  | 6 steps: TDX attestation → on-chain check → CKD request → encrypted to the enclave → memory only → wallet keys derived inside; vault line |
+| Agent Custody      | One wallet on NEAR / EVM / Solana, code sample, policy cards, who-can-do-what table |
+| Connectors         | Mercury, Gmail + GitHub, Hyperliquid + Polymarket; link to `/connectors`     |
+| Why OutLayer       | vs agent-wallet products and TEE providers                                   |
+| OutLayer Today     | Open-source enclave code, mainnet, production apps                           |
+| Get Started        | CLI quick start                                                              |
+| CTA + Footer       | Links to app, docs, playground                                               |
+
+### `/platform` — Platform (platform.html)
+
+Developer depth: what runs in the enclave and why it can be trusted.
+
+| Section             | Description                                                        |
+| ------------------- | ------------------------------------------------------------------ |
+| Core Platform       | TDX attestation, CKD, secrets, blockchain + HTTPS, monetization, AI-friendly |
+| What Your Code Can Call | Host interfaces: `near:rpc`, `near:storage`, `outlayer:wallet`, `near:vrf`, `near:payment`, `outlayer:signing-keys`; sandbox, composability, scheduling |
+| Secrets & Permissions | Browser-encrypted secrets, access conditions                     |
+| Two Layers          | Intel TDX + NEAR MPC network                                       |
+| Verify, Don't Trust | What the operator cannot do; what anyone can verify                |
+| How It Works        | 4 steps; smart-contract (yield/resume) and monetization examples   |
+| Why OutLayer        | Comparison with L2s, oracles, cloud functions                      |
 
 ### `/products` — Products (products.html)
 
